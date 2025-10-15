@@ -1,38 +1,95 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tuneline Music - Song Lyrics Collection</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-<style>
-body {margin:0; padding:0; font-family:'Montserrat', sans-serif; background:#fefefe; color:#222; line-height:1.7;}
-a {text-decoration:none; color:#1e40af; transition:0.3s;}
-a:hover {color:#1e3a8a;}
-header {background: linear-gradient(135deg,#f97316,#f43f5e); color:#fff; padding:60px 20px; text-align:center; border-bottom:5px solid #facc15;}
-header h1 {font-family:'Playfair Display', serif; font-size:48px; font-weight:700; margin-bottom:10px; letter-spacing:1px; text-shadow: 1px 1px 4px rgba(0,0,0,0.3);}
-header p {font-size:20px; font-weight:500; letter-spacing:0.5px;}
-main {max-width:1000px; margin:50px auto; padding:0 20px;}
-h2 {font-family:'Playfair Display', serif; font-size:36px; color:#111; margin-bottom:30px; border-bottom:2px solid #f97316; display:inline-block; padding-bottom:5px;}
-ul {list-style:none; padding:0;}
-li {background:#fff; padding:20px 25px; margin-bottom:20px; font-size:22px; font-weight:500; border-radius:12px; box-shadow:0 6px 15px rgba(0,0,0,0.08); transition:0.3s;}
-li:hover {transform:translateY(-3px); box-shadow:0 8px 20px rgba(0,0,0,0.15);}
-footer {text-align:center; padding:25px; margin-top:60px; font-size:16px; color:#555; font-family:'Playfair Display', serif;}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tuneline Music - Official Songs List">
+  <title>Tuneline Music - Songs</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #ffecd2, #fcb69f);
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      animation: bgMove 20s infinite alternate;
+    }
+
+    @keyframes bgMove {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    .container {
+      background: rgba(255,255,255,0.97);
+      border-radius: 25px;
+      max-width: 700px;
+      width: 100%;
+      padding: 50px 40px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3em;
+      margin-bottom: 40px;
+      color: #e63946;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      font-size: 1.3em;
+      margin: 15px 0;
+      color: #457b9d;
+      transition: transform 0.3s, color 0.3s;
+      cursor: pointer;
+    }
+
+    li:hover {
+      color: #e63946;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      h1 { font-size: 2.2em; margin-bottom: 30px; }
+      li { font-size: 1.1em; }
+      .container { padding: 30px 20px; }
+    }
+  </style>
 </head>
 <body>
-<header>
-  <h1>Tuneline Music</h1>
-  <p>Premium Hindi + Roman Lyrics Collection</p>
-</header>
-<main>
-<h2>Available Songs</h2>
-<ul>
-  <li><a href="songs/tere_bina_jeena_kya.html">तेरे बिना जीना क्या</a> <span style="font-size:16px; color:#555;">(Lyrics by Nur Alam)</span></li>
-</ul>
-</main>
-<footer>
-  <p>© 2025 Tuneline Music | All rights reserved</p>
-</footer>
+  <div class="container">
+    <h1>Tuneline Music</h1>
+    <p>Available Songs:</p>
+    <ul>
+      <li>Tere Bina Jeena Kya</li>
+      <li>Dil Mera Bechara Hai</li>
+      <li>Tu Yaad Ban Jaye O Bewafa</li>
+      <li>Mar Jayenge, Imaan Ka Sauda Na Karenge</li>
+      <li>Yeh Jism</li>
+    </ul>
+  </div>
 </body>
 </html>
