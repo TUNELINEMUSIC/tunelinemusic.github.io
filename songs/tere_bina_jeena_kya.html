@@ -1,186 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tere Bina Jeena Kya - Romantic Song Lyrics in Hinglish & Hindi">
-    <title>Tere Bina Jeena Kya - Lyrics</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <style>
-        /* Basic Reset */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Tere Bina Jeena Kya - Lyrics by Tuneline Music">
+<title>Tere Bina Jeena Kya - Lyrics</title>
 
-        body {
-            font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #fceabb, #f8b500);
-            color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-            overflow-x: hidden;
-        }
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari&display=swap" rel="stylesheet">
 
-        /* Container */
-        .container {
-            background: rgba(255, 255, 255, 0.98);
-            border-radius: 20px;
-            max-width: 800px;
-            width: 100%;
-            padding: 50px 40px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
-            overflow: hidden;
-        }
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg,#fceabb,#f8b500);
+  color: #333;
+  min-height: 100vh;
+  padding: 20px;
+  overflow-x: hidden;
+  animation: bgMove 20s infinite alternate;
+}
+@keyframes bgMove {0% {background-position:0% 50%;} 100% {background-position:100% 50%;}}
 
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5em;
-            text-align: center;
-            margin-bottom: 40px;
-            color: #e63946;
-            text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-        }
+.container {
+  max-width: 850px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.97);
+  border-radius: 25px;
+  padding: 50px 40px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+}
 
-        /* Lyrics Sections */
-        .lyrics-section {
-            margin-bottom: 40px;
-        }
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3em;
+  text-align:center;
+  margin-bottom:30px;
+  color:#e63946;
+  text-shadow:2px 2px 8px rgba(0,0,0,0.2);
+}
 
-        .lyrics-section p {
-            font-size: 1.2em;
-            line-height: 2em;
-            margin-bottom: 20px;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 1s forwards;
-        }
+.lyrics-section p {
+  font-size:1.2em;
+  line-height:2em;
+  margin-bottom:20px;
+  opacity:0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+.chorus { color:#457b9d; font-weight:bold; font-size:1.25em; }
 
-        .lyrics-section p:nth-child(1){ animation-delay: 0.2s; }
-        .lyrics-section p:nth-child(2){ animation-delay: 0.4s; }
-        .lyrics-section p:nth-child(3){ animation-delay: 0.6s; }
-        .lyrics-section p:nth-child(4){ animation-delay: 0.8s; }
-        .chorus {
-            color: #457b9d;
-            font-weight: bold;
-            font-size: 1.25em;
-        }
+.hindi-lyrics p { 
+  font-size:1.2em; 
+  font-family: 'Noto Sans Devanagari', sans-serif; 
+  line-height:2em; 
+  margin-bottom:20px; 
+  color:#1d3557; 
+}
 
-        /* Animation */
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+.back-btn {
+  display:inline-block;
+  margin-bottom:20px;
+  padding:10px 20px;
+  background:#e63946;
+  color:#fff;
+  border-radius:10px;
+  cursor:pointer;
+  text-decoration:none;
+  transition: background 0.3s;
+}
+.back-btn:hover { background:#d62828; }
 
-        /* Hindi Lyrics Style */
-        .hindi-lyrics p {
-            font-size: 1.2em;
-            font-family: 'Noto Sans Devanagari', sans-serif;
-            line-height: 2em;
-            margin-bottom: 20px;
-            color: #1d3557;
-        }
+.partition {
+  height:2px;
+  background: linear-gradient(to right, #e63946, #f8b500, #e63946);
+  margin:40px 0;
+  border-radius:2px;
+}
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2em;
-            }
-            .container {
-                padding: 30px 20px;
-            }
-            .lyrics-section p, .hindi-lyrics p {
-                font-size: 1em;
-            }
-        }
-
-    </style>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari&display=swap" rel="stylesheet">
+@keyframes fadeInUp { to { opacity:1; transform:translateY(0);} }
+@media(max-width:768px) {
+  h1 { font-size:2.2em; }
+  .lyrics-section p, .hindi-lyrics p { font-size:1em; line-height:1.8em; }
+  .container { padding:30px 20px; }
+}
+</style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Tere Bina Jeena Kya</h1>
+<div class="container">
+  <a class="back-btn" onclick="history.back()">&#8592; Back</a>
+  <h1>Tere Bina Jeena Kya</h1>
 
-        <!-- Hinglish Lyrics -->
-        <div class="lyrics-section">
-            <p class="chorus">Tere bina jeena kya, dil mera bechara hai<br>
-            Tujhse juda hokar rehna, marna meri dobaara hai<br>
-            Is betaab dil ka mera, bas tera hi sahaara hai<br>
-            Ye dil jo dhadke seene mein, ye bhi to tumhaara hai (×2)</p>
+  <!-- Hinglish Lyrics -->
+  <div class="lyrics-section">
+    <p class="chorus">Tere bina jeena kya, dil mera bechara hai<br>
+Tujhse juda hokar rehna, marna meri dobaara hai<br>
+Is betaab dil ka mera, bas tera hi sahaara hai<br>
+Ye dil jo dhadke seene mein, ye bhi to tumhaara hai (×2)</p>
+<p>Mere har jazbaat ka, tu hi nighbaan hai<br>
+Mere ishq ki zameen par, tu hi imtihaan hai<br>
+Mere har saans mein, bas tera hi bayaan hai<br>
+Mere har ghadi har pal, tu hi darmiyaan hai</p>
+<p>Tumse ye doori humko, bilkul na gawaara hai<br>
+Gham ke is samundar ka, milta nahi koi kinaara hai<br>
+Yun na chhodo humein tum, dil ka zakhm hara hai<br>
+Tere bagair is jahaan mein, kaun bhala hamaara hai</p>
+<p class="chorus">Tere bina jeena kya, dil mera bechara hai<br>
+Tujhse juda hokar rehna, marna meri dobaara hai<br>
+Is betaab dil ka mera, bas tera hi sahaara hai<br>
+Ye dil jo dhadke seene mein, ye bhi to tumhaara hai</p>
+  </div>
 
-            <p>Mere har jazbaat ka, tu hi nighbaan hai<br>
-            Mere ishq ki zameen par, tu hi imtihaan hai<br>
-            Mere har saans mein, bas tera hi bayaan hai<br>
-            Mere har ghadi har pal, tu hi darmiyaan hai</p>
+  <!-- Partition -->
+  <div class="partition"></div>
 
-            <p>Tumse ye doori humko, bilkul na gawaara hai<br>
-            Gham ke is samundar ka, milta nahi koi kinaara hai<br>
-            Yun na chhodo humein tum, dil ka zakhm hara hai<br>
-            Tere bagair is jahaan mein, kaun bhala hamaara hai</p>
-
-            <p class="chorus">Tere bina jeena kya, dil mera bechara hai<br>
-            Tujhse juda hokar rehna, marna meri dobaara hai<br>
-            Is betaab dil ka mera, bas tera hi sahaara hai<br>
-            Ye dil jo dhadke seene mein, ye bhi to tumhaara hai</p>
-
-            <p>Meri bandishon ka, tu hi to darbaan hai<br>
-            Mere dil ki kitaabon mein, tera hi to naam hai<br>
-            Mere har ek sawaal ka, tu hi to jawaab hai<br>
-            Mere har ek khwaab ka, tu hi to chaahat hai</p>
-
-            <p>Honthon pe khaamoshi, aankhon mein pehra hai<br>
-            Is dil mein tera hi to, aks chhupa thehra hai<br>
-            Tere bina mera wajood, jaise ek sehra hai<br>
-            Bas tere na hone se, lage sab kuch adhoora hai</p>
-
-            <p class="chorus">Tere bina jeena kya, dil mera bechara hai<br>
-            Tujhse juda hokar rehna, marna meri dobaara hai<br>
-            Is betaab dil ka mera, bas tera hi sahaara hai<br>
-            Ye dil jo dhadke seene mein, ye bhi to tumhaara hai</p>
-        </div>
-
-        <!-- Hindi Lyrics -->
-        <div class="lyrics-section hindi-lyrics">
-            <p class="chorus">तेरे बिना जीना क्या, दिल मेरा बेचारा है<br>
-            तुझसे जुदा होकर रहना, मरना मेरी दोबारा है<br>
-            इस बेताब दिल का मेरा, बस तेरा ही सहारा है<br>
-            ये दिल जो धड़कें सीने में, ये भी तो तुम्हारा है (×2)</p>
-
-            <p>मेरे हर जज़्बात का, तू ही निगहबां है<br>
-            मेरे इश्क़ की ज़मीं पर, तू ही इम्तिहां है<br>
-            मेरे हर साँस में, बस तेरा ही बयां है<br>
-            मेरे हर घड़ी हर पल, तू ही दरमियां है</p>
-
-            <p>तुमसे ये दूरी हमको, बिल्कुल न गवारा है<br>
-            ग़म के इस समुंदर का, मिलता नहीं कोई किनारा है<br>
-            यूँ न छोड़ो हमें तुम, दिल का ज़ख़्म हरा है<br>
-            तेरे बग़ैर इस जहाँ में, कौन भला हमारा है</p>
-
-            <p class="chorus">तेरे बिना जीना क्या, दिल मेरा बेचारा है<br>
-            तुझसे जुदा होकर रहना, मरना मेरी दोबारा है<br>
-            इस बेताब दिल का मेरा, बस तेरा ही सहारा है<br>
-            ये दिल जो धड़कें सीने में, ये भी तो तुम्हारा है</p>
-
-            <p>मेरी बंदिशों का, तू ही तो दरबां है<br>
-            मेरे दिल की किताबों में, तेरा ही तो नाम है<br>
-            मेरे हर एक सवाल का, तू ही तो जवाब है<br>
-            मेरे हर एक ख़्वाब का, तू ही तो चाहत है</p>
-
-            <p>होंठों पे ख़ामोशी, आँखों में पहरा है<br>
-            इस दिल में तेरा ही तो, अक्स छुपा ठहरा है<br>
-            तेरे बिना मेरा वजूद, जैसे एक सहरा है<br>
-            बस तेरे न होने से, लगे सब कुछ अधूरा है</p>
-
-            <p class="chorus">तेरे बिना जीना क्या, दिल मेरा बेचारा है<br>
-            तुझसे जुदा होकर रहना, मरना मेरी दोबारा है<br>
-            इस बेताब दिल का मेरा, बस तेरा ही सहारा है<br>
-            ये दिल जो धड़कें सीने में, ये भी तो तुम्हारा है</p>
-        </div>
-
-    </div>
+  <!-- Hindi Lyrics -->
+  <div class="lyrics-section hindi-lyrics">
+    <p class="chorus">तेरे बिना जीना क्या, दिल मेरा बेचारा है<br>
+तुझसे जुदा होकर रहना, मरना मेरी दोबारा है<br>
+इस बेताब दिल का मेरा, बस तेरा ही सहारा है<br>
+ये दिल जो धड़कें सीने में, ये भी तो तुम्हारा है (×2)</p>
+<p>मेरे हर जज़्बात का, तू ही निगहबां है<br>
+मेरे इश्क़ की ज़मीं पर, तू ही इम्तिहां है<br>
+मेरे हर साँस में, बस तेरा ही बयां है<br>
+मेरे हर घड़ी हर पल, तू ही दरमियां है</p>
+<p>तुमसे ये दूरी हमको, बिल्कुल न गवारा है<br>
+ग़म के इस समुंदर का, मिलता नहीं कोई किनारा है<br>
+यूँ न छोड़ो हमें तुम, दिल का ज़ख़्म हरा है<br>
+तेरे बग़ैर इस जहाँ में, कौन भला हमारा है</p>
+<p class="chorus">तेरे बिना जीना क्या, दिल मेरा बेचारा है<br>
+तुझसे जुदा होकर रहना, मरना मेरी दोबारा है<br>
+इस बेताब दिल का मेरा, बस तेरा ही सहारा है<br>
+ये दिल जो धड़कें सीने में, ये भी तो तुम्हारा है</p>
+  </div>
+</div>
 
 </body>
 </html>
