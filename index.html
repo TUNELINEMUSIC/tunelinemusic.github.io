@@ -1,95 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Tuneline Music - Official Songs List">
-  <title>Tuneline Music - Songs</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Tuneline Music - Official Music and Lyrics Homepage">
+<title>Tuneline Music - Home</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg,#ffecd2,#fcb69f);
+  min-height: 100vh;
+  padding: 0;
+  color: #333;
+  overflow-x: hidden;
+  animation: bgMove 25s infinite alternate;
+}
+@keyframes bgMove {0% {background-position:0% 50%;} 100% {background-position:100% 50%;}}
 
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: linear-gradient(135deg, #ffecd2, #fcb69f);
-      color: #333;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 20px;
-      animation: bgMove 20s infinite alternate;
-    }
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 50px 40px;
+  text-align: center;
+}
 
-    @keyframes bgMove {
-      0% { background-position: 0% 50%; }
-      100% { background-position: 100% 50%; }
-    }
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3em;
+  color: #e63946;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+  animation: fadeInDown 1s ease forwards;
+}
 
-    .container {
-      background: rgba(255,255,255,0.97);
-      border-radius: 25px;
-      max-width: 700px;
-      width: 100%;
-      padding: 50px 40px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.25);
-      text-align: center;
-    }
+.intro {
+  font-size: 1.2em;
+  line-height: 1.8em;
+  margin-bottom: 40px;
+  color: #555;
+  animation: fadeInUp 1s ease forwards;
+}
 
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3em;
-      margin-bottom: 40px;
-      color: #e63946;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
-      animation: fadeIn 1.5s ease forwards;
-    }
+ul.songs {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 50px;
+}
 
-    ul {
-      list-style: none;
-      padding: 0;
-    }
+ul.songs li {
+  font-size: 1.3em;
+  margin: 15px 0;
+  color: #457b9d;
+  cursor: pointer;
+  transition: transform 0.3s, color 0.3s;
+}
+ul.songs li:hover { color: #e63946; transform: scale(1.05); }
 
-    li {
-      font-size: 1.3em;
-      margin: 15px 0;
-      color: #457b9d;
-      transition: transform 0.3s, color 0.3s;
-      cursor: pointer;
-    }
+footer {
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 2px solid rgba(0,0,0,0.1);
+  font-size: 0.9em;
+  color: #555;
+  animation: fadeIn 2s ease forwards;
+}
 
-    li:hover {
-      color: #e63946;
-      transform: scale(1.05);
-    }
+footer p a {
+  color:#e63946;
+  text-decoration:none;
+}
+footer p a:hover { text-decoration: underline; }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+/* Animations */
+@keyframes fadeInDown { from { opacity:0; transform: translateY(-20px);} to {opacity:1; transform:translateY(0);} }
+@keyframes fadeInUp { from { opacity:0; transform: translateY(20px);} to {opacity:1; transform:translateY(0);} }
+@keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-      h1 { font-size: 2.2em; margin-bottom: 30px; }
-      li { font-size: 1.1em; }
-      .container { padding: 30px 20px; }
-    }
-  </style>
+@media(max-width:768px) {
+  header h1 { font-size:2.2em; }
+  .intro { font-size:1em; }
+  ul.songs li { font-size:1.1em; }
+}
+</style>
 </head>
 <body>
-  <div class="container">
+
+<div class="container">
+  <header>
     <h1>Tuneline Music</h1>
-    <p>Available Songs:</p>
-    <ul>
-      <li>Tere Bina Jeena Kya</li>
-      <li>Dil Mera Bechara Hai</li>
-      <li>Tu Yaad Ban Jaye O Bewafa</li>
-      <li>Mar Jayenge, Imaan Ka Sauda Na Karenge</li>
-      <li>Yeh Jism</li>
+  </header>
+
+  <div class="intro">
+    <p>Welcome to Tuneline Music – your ultimate destination for soulful music and heartfelt lyrics. Explore our carefully crafted songs and feel every emotion come alive through words and melody.</p>
+  </div>
+
+  <div class="songs-section">
+    <h2 style="color:#e63946; margin-bottom:20px;">Available Songs</h2>
+    <ul class="songs">
+      <li onclick="location.href='tere-bina.html'">Tere Bina Jeena Kya</li>
+      <li onclick="location.href='dil-mera.html'">Dil Mera Bechara Hai</li>
+      <li onclick="location.href='tu-yaad.html'">Tu Yaad Ban Jaye O Bewafa</li>
+      <li onclick="location.href='mar-jayenge.html'">Mar Jayenge, Imaan Ka Sauda Na Karenge</li>
+      <li onclick="location.href='yeh-jism.html'">Yeh Jism</li>
     </ul>
   </div>
+
+  <footer>
+    <p>©️ 2025 Tuneline Music. All Rights Reserved.</p>
+    <p>Designed and maintained by <a href="#">Tuneline Music</a></p>
+  </footer>
+</div>
+
 </body>
 </html>
