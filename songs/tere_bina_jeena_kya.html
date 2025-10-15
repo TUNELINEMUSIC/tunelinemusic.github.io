@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Tere Bina Jeena Kya - Lyrics by Tuneline Music">
-<title>Tere Bina Jeena Kya - Lyrics</title>
+<title>Tere Bina Jeena Kya - Lyrics | Tuneline Music</title>
 
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -14,75 +14,88 @@
 * { margin:0; padding:0; box-sizing:border-box; }
 body {
   font-family: 'Roboto', sans-serif;
-  background: linear-gradient(135deg,#fceabb,#f8b500);
-  color: #333;
+  background: linear-gradient(135deg,#fbc2eb,#a6c1ee);
   min-height: 100vh;
   padding: 20px;
+  color: #fff;
   overflow-x: hidden;
-  animation: bgMove 20s infinite alternate;
+  animation: bgMove 25s infinite alternate;
 }
 @keyframes bgMove {0% {background-position:0% 50%;} 100% {background-position:100% 50%;}}
 
 .container {
-  max-width: 850px;
+  max-width: 900px;
   margin: 0 auto;
-  background: rgba(255,255,255,0.97);
-  border-radius: 25px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(15px);
+  border-radius: 30px;
   padding: 50px 40px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
 }
 
-h1 {
+header h1 {
   font-family: 'Playfair Display', serif;
   font-size: 3em;
+  color: #ffdd59;
   text-align:center;
-  margin-bottom:30px;
-  color:#e63946;
-  text-shadow:2px 2px 8px rgba(0,0,0,0.2);
+  margin-bottom:10px;
+  text-shadow:2px 2px 12px rgba(0,0,0,0.3);
+}
+
+header h3 {
+  font-size:1.2em;
+  text-align:center;
+  margin-bottom:40px;
+  color:#f1f1f1;
+  font-weight:400;
 }
 
 .lyrics-section p {
-  font-size:1.2em;
+  font-size:1.25em;
   line-height:2em;
-  margin-bottom:20px;
+  margin-bottom:25px;
   opacity:0;
   transform: translateY(20px);
   animation: fadeInUp 1s forwards;
 }
-.chorus { color:#457b9d; font-weight:bold; font-size:1.25em; }
+.chorus { color:#ffd700; font-weight:bold; font-size:1.3em; transition: transform 0.3s;}
+.chorus:hover { transform: scale(1.05); color:#ff9f1c; }
 
 .hindi-lyrics p { 
-  font-size:1.2em; 
+  font-size:1.25em; 
   font-family: 'Noto Sans Devanagari', sans-serif; 
   line-height:2em; 
-  margin-bottom:20px; 
-  color:#1d3557; 
+  margin-bottom:25px; 
+  color:#f5f5f5; 
 }
 
 .back-btn {
   display:inline-block;
-  margin-bottom:20px;
-  padding:10px 20px;
-  background:#e63946;
-  color:#fff;
-  border-radius:10px;
+  margin-bottom:30px;
+  padding:12px 25px;
+  background:#ffdd59;
+  color:#2d2d2d;
+  font-weight:700;
+  border-radius:15px;
   cursor:pointer;
   text-decoration:none;
-  transition: background 0.3s;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  transition: all 0.3s;
 }
-.back-btn:hover { background:#d62828; }
+.back-btn:hover { background:#ffd700; transform: scale(1.05); }
 
 .partition {
-  height:2px;
-  background: linear-gradient(to right, #e63946, #f8b500, #e63946);
-  margin:40px 0;
-  border-radius:2px;
+  height:3px;
+  background: linear-gradient(to right, #ff9f1c, #ffdd59, #ff9f1c);
+  margin:50px 0;
+  border-radius:3px;
 }
 
 @keyframes fadeInUp { to { opacity:1; transform:translateY(0);} }
 @media(max-width:768px) {
-  h1 { font-size:2.2em; }
-  .lyrics-section p, .hindi-lyrics p { font-size:1em; line-height:1.8em; }
+  header h1 { font-size:2.2em; }
+  header h3 { font-size:1em; }
+  .lyrics-section p, .hindi-lyrics p { font-size:1.1em; line-height:1.8em; }
   .container { padding:30px 20px; }
 }
 </style>
@@ -91,7 +104,10 @@ h1 {
 
 <div class="container">
   <a class="back-btn" onclick="history.back()">&#8592; Back</a>
-  <h1>Tere Bina Jeena Kya</h1>
+  <header>
+    <h1>Tere Bina Jeena Kya</h1>
+    <h3>Written & Composed by Tuneline Music</h3>
+  </header>
 
   <!-- Hinglish Lyrics -->
   <div class="lyrics-section">
